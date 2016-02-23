@@ -5,8 +5,14 @@ using Nancy;
 using Nancy.ViewEngines.Razor;
 using System.Collections.Generic;
 
-namespace TemplateProject
+namespace ToDoList
 {
+
+  public static class DBConfiguration
+   {
+       public static string ConnectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=todo;Integrated Security=SSPI;";
+   }
+
   public class Startup
   {
     public void Configure(IApplicationBuilder app)
