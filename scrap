@@ -1,0 +1,13 @@
+<select name="ingredients">
+  @foreach (var Ingredient in @Model)
+  {
+    <option value="@Ingredient.GetName()">@Ingredient.GetName()</option>
+  }
+</select>
+
+
+<form action="/menu-item/@Model.GetId" method="post">
+Name of ingredient:
+<input type="text" name="ingredient-name">
+<button type="submit">Add Ingredient</button>
+</form>

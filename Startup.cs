@@ -5,12 +5,12 @@ using Nancy;
 using Nancy.ViewEngines.Razor;
 using System.Collections.Generic;
 
-namespace ToDoList
+namespace Inventory
 {
 
   public static class DBConfiguration
    {
-       public static string ConnectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=todo;Integrated Security=SSPI;";
+       public static string ConnectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=inventory2;Integrated Security=SSPI;";
    }
 
   public class Startup

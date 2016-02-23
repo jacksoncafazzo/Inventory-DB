@@ -1,0 +1,25 @@
+Ingredients in this Menu Item:
+
+@{
+  if (@Model.GetIngredients() != null)
+  {
+    foreach (var entry in @Model.GetIngredients())
+    {
+
+    <li>@entry.GetDescription()</li>
+    }
+  }
+}
+
+<br><br>
+Add Ingredients:
+
+
+<form action="/menu-item/@Model.GetId()" method="post">
+Name of ingredient:
+<input type="text" name="ingredient-name">
+<br><br>
+<button type="submit">Add Ingredient</button>
+</form>
+
+<a href="/">Back</a>

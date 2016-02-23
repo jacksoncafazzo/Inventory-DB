@@ -5,6 +5,26 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
   </head>
   <body>
-    <h1>THIS IS A TEMPLATE</h1>
+    <h1>Build Your Menu Item with Inventory items</h1>
+    <form action="/" method="post">
+      Enter a Menu Item Name:
+      <input type="text" name="menu-item-name">
+      <button type="submit">Add Menu Item</button>
+    </form>
+
+    <ul>
+
+    @{
+      if (Model != null)
+      {
+        foreach (var entry in Model)
+        {
+
+        <li><a href="/menu-item/@entry.GetId()">@entry.GetName()</a></li>
+        }
+      }
+    }
+
+  </ul>
   </body>
 </html>
